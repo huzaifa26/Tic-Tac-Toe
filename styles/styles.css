@@ -1,5 +1,5 @@
 body{
-  background-image: url(/images/PATTERNS.svg);
+  background-image: url(../images/PATTERNS.svg);
   background-size: cover;
   position: absolute;
   top: 50%;
@@ -31,7 +31,7 @@ body{
 }
 
 .check{
-  background-image: url(/images/check-solid.svg);
+  background-image: url(../images/check-solid.svg);
   background-repeat: no-repeat;
   background-size:90px;
   background-position: 5px 10px;
@@ -39,7 +39,7 @@ body{
 }
 
 .cross{
-  background-image: url(/images/times-solid.svg);
+  background-image: url(../images/times-solid.svg);
   background-size:90px;
   background-repeat: no-repeat;
   background-position: 8px 0px;
@@ -80,7 +80,7 @@ body{
   font-weight: bold;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px; solid  rgb(244, 244, 244);
+  border: 1px solid rgb(244, 244, 244);
   box-shadow: 0px 4px black;
   color:rgb(120, 120, 120);
 }
