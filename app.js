@@ -73,7 +73,7 @@ function checkSequence(){
      gameResult("Player 2 has Won.")
   }
 
-  if($("#b2").hasClass("cross") && $("#b5").hasClass("cross") && $("#b6").hasClass("cross")){
+  if($("#b2").hasClass("cross") && $("#b5").hasClass("cross") && $("#b8").hasClass("cross")){
      gameResult("Player 2 has Won.")
   }
 
