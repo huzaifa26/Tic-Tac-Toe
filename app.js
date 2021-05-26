@@ -18,8 +18,10 @@ function playerInfo(){
 }
 
 function gameResult(result){
-  $("#result").show();
-  $("#winner").html(result);
+  setTimeout(function(){
+    $("#result").show();
+    $("#winner").html(result);
+  },300)
 }
 
 function checkSequence(){
@@ -40,7 +42,7 @@ function checkSequence(){
     alert("player 1 Won the game");
   }
 
-  if($("#b2").hasClass("check") && $("#b5").hasClass("check") && $("#b6").hasClass("check")){
+  if($("#b2").hasClass("check") && $("#b5").hasClass("check") && $("#b8").hasClass("check")){
      gameResult("Player 1 has Won.")
   }
 

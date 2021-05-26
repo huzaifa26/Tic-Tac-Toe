@@ -1,14 +1,21 @@
 body{
+  margin: 0;
+  padding:0;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
   background-image: url(../images/PATTERNS.svg);
   background-size: cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-section{
-  width: clamp(370px, 500px, 100px);
+  width: 470px;
+  height: 500px;
   background-color:rgb(120, 120, 120);
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgb(0,0,0,40%);
@@ -17,7 +24,7 @@ body{
 }
 
 .box{
-  height: 100px;
+  height: 115px;
   background-color: rgb(244, 244, 244);
   border-radius: 5px;
   margin: 10px;
@@ -94,43 +101,64 @@ body{
   top: 4px;
 }
 
+.player h2{
+  font-size: 30px;
+}
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width:600px) {
   .main-section{
-    width: 800px;
-    height:1000px;
-  }
-
-  .box{
-    height: 250px;
-  }
-
-  .player h2{
-    font-size: 62px;
-  }
-
-  .check{
-    background-size:200px;
-    background-position: 20px 40px;
-  }
-
-  .cross{
-    background-size:200px;
-    background-position: 20px 20px;
-  }
-
-  .popup{
-    width: 500px;
+    width: 470px;
     height: 500px;
   }
 
+  .box{
+    height: 115px;
+  }
+
+  .player h2{
+    font-size: 30px;
+  }
+
+  .check{
+    background-size:100px;
+    background-position: 20px 20px;
+  }
+
+  .cross{
+    background-size:100px;
+    background-position: 20px 5px;
+  }
+
+  .popup{
+    width: 300px;
+    height: 320px;
+  }
+
   .popup h1{
-    font-size: 62px;
+    font-size: 36px;
   }
 
   .btn{
-    width: 300px;
-    height: 80px;
-    font-size: 42px;
+    width: 140px;
+    height: 45px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:480px){
+  .main-section{
+    width: 400px;
+    height: 480px;
+  }
+
+  .box{
+    height: 100px;
+  }
+}
+
+@media screen and (max-width:420px){
+  .main-section{
+    width: 320px;
   }
 }
