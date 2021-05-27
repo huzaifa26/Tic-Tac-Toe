@@ -155,10 +155,31 @@ body{
   .box{
     height: 100px;
   }
+
+  .check{
+    background-size:100px;
+    background-position: 5px 10px;
+  }
+
+  .cross{
+    background-size:100px;
+    background-position: 10px -5px;
+  }
 }
 
 @media screen and (max-width:420px){
   .main-section{
     width: 320px;
   }
+
+  .check{
+    background-size:80px;
+    background-position: 3px 15px;
+  }
+
+  .cross{
+    background-size:80px;
+    background-position: 3px 5px;
+  }
+
 }
