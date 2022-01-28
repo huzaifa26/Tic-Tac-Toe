@@ -23,16 +23,6 @@ function playerInfo(){
 
 function gameResult(result){
   finish=true;
-
-  if(finish === true){
-    let array1=["#b1","#b2","#b3","#b4","#b5","#b6","#b7","#b8","#b9"]
-    for (let i=0;i<array1.length-1;i++){
-      if(!$(array1[i]).hasClass("cross") || !$(array1[i]).hasClass("check")){
-        $(array1[i]).disabled=true;
-      }
-    }
-  }
-
   setTimeout(function(){
     $("#result").show();
     $("#winner").html(result);
