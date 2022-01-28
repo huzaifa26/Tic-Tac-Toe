@@ -1,10 +1,14 @@
 var start=false;
 var player1=true;
+let counter=0;
+let finish=false;
 
 $("#result").hide();
 
 function playerSwitch(){
   player1=!player1;
+  counter++;
+  checkDraw();
   playerInfo();
   checkSequence();
 }
@@ -18,10 +22,30 @@ function playerInfo(){
 }
 
 function gameResult(result){
+  finish=true;
+
+  if(finish === true){
+    let array1=["#b1","#b2","#b3","#b4","#b5","#b6","#b7","#b8","#b9"]
+    for (let i=0;i<array1.length-1;i++){
+      if(!$(array1[i]).hasClass("cross") || !$(array1[i]).hasClass("check")){
+        $(array1[i]).disabled=true;
+      }
+    }
+  }
+
   setTimeout(function(){
     $("#result").show();
     $("#winner").html(result);
   },300)
+}
+
+function checkDraw(){
+  if (counter === 9){
+    setTimeout(function(){
+      $("#result").show();
+      $("#winner").html("GAME DRAW");
+    },300)
+  }
 }
 
 function checkSequence(){
@@ -39,7 +63,7 @@ function checkSequence(){
   }
 
   if($("#b1").hasClass("check") && $("#b4").hasClass("check") && $("#b7").hasClass("check")){
-    alert("player 1 Won the game");
+    gameResult("player 1 Won the game");
   }
 
   if($("#b2").hasClass("check") && $("#b5").hasClass("check") && $("#b8").hasClass("check")){
@@ -84,7 +108,7 @@ function checkSequence(){
   }
 
   if($("#b1").hasClass("cross") && $("#b5").hasClass("cross") && $("#b9").hasClass("cross")){
-    alert("player 1 Won the game");
+    gameResult("player 1 Won the game");
   }
 
   if($("#b3").hasClass("cross") && $("#b5").hasClass("cross") && $("#b7").hasClass("cross")){
@@ -94,13 +118,12 @@ function checkSequence(){
 
 $("#new-game").click(function(){
   location.reload();
-  // alert("new windows");
 });
 
 $("#b1").click(function(){
   if($("#b1").hasClass("cross") || $("#b1").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b1").addClass("check");
       $("#b1").disabled=true;
@@ -115,7 +138,7 @@ $("#b1").click(function(){
 $("#b2").click(function(){
   if($("#b2").hasClass("cross") || $("#b2").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b2").addClass("check");
       playerSwitch();
@@ -129,7 +152,7 @@ $("#b2").click(function(){
 $("#b3").click(function(){
   if($("#b3").hasClass("cross") || $("#b3").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b3").addClass("check");
       playerSwitch();
@@ -143,7 +166,7 @@ $("#b3").click(function(){
 $("#b4").click(function(){
   if($("#b4").hasClass("cross") || $("#b4").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b4").addClass("check");
       playerSwitch();
@@ -157,7 +180,7 @@ $("#b4").click(function(){
 $("#b5").click(function(){
   if($("#b5").hasClass("cross") || $("#b5").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b5").addClass("check");
       playerSwitch();
@@ -171,7 +194,7 @@ $("#b5").click(function(){
 $("#b6").click(function(){
   if($("#b6").hasClass("cross") || $("#b6").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b6").addClass("check");
       playerSwitch();
@@ -185,7 +208,7 @@ $("#b6").click(function(){
 $("#b7").click(function(){
   if($("#b7").hasClass("cross") || $("#b7").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b7").addClass("check");
       playerSwitch();
@@ -199,7 +222,7 @@ $("#b7").click(function(){
 $("#b8").click(function(){
   if($("#b8").hasClass("cross") || $("#b8").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b8").addClass("check");
       playerSwitch();
@@ -213,7 +236,7 @@ $("#b8").click(function(){
 $("#b9").click(function(){
   if($("#b9").hasClass("cross") || $("#b9").hasClass("check")){
     //do nothing
-  } else{
+  } else if (finish !== true) {
     if(player1){
       $("#b9").addClass("check");
       playerSwitch();

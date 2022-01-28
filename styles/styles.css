@@ -1,6 +1,7 @@
 body{
   margin: 0;
   padding:0;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .container{
@@ -15,7 +16,7 @@ body{
 
 .main-section{
   width: 470px;
-  height: 500px;
+  height: 520px;
   background-color:rgb(120, 120, 120);
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgb(0,0,0,40%);
@@ -41,14 +42,14 @@ body{
   background-image: url(../images/check-solid.svg);
   background-repeat: no-repeat;
   background-size:90px;
-  background-position: 5px 10px;
+  background-position: 22px 18px;
 }
 
 .cross{
   background-image: url(../images/times-solid.svg);
   background-size:90px;
   background-repeat: no-repeat;
-  background-position: 8px 0px;
+  background-position: 22px 5px;
 }
 
 .button{
@@ -102,7 +103,7 @@ body{
 }
 
 .player h2{
-  font-size: 30px;
+  font-size: 32px;
 }
 
 
@@ -117,7 +118,7 @@ body{
   }
 
   .player h2{
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .check{
@@ -136,13 +137,13 @@ body{
   }
 
   .popup h1{
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .btn{
     width: 140px;
     height: 45px;
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
